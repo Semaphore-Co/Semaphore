@@ -8,9 +8,11 @@ from functools import wraps
 from nocache import nocache
 
 app = Flask(__name__)
-app.secret_key = "eaa4ebe9-3bd1-4c3c-bcfa-d09ae5cbe503"# = str(uuid.uuid4())
 
 relpath = lambda path: os.path.join(os.path.dirname(os.path.realpath(__file__)), path)
+
+with open(relpath("credentials/flask_secret_key")) as f:
+	app.secret_key = f.read().strip()
 
 db = database(app, relpath("database.db"), relpath("schema.sql"), ["PRAGMA foreign_keys = ON"])
 
