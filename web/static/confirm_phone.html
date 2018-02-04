@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-blue.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/static/css/confirm_phone.css">
+<script defer src="/static/js/confirm_phone.js"></script>
+<link rel="shortcut icon" href="/static/icons/icon.ico" type="image/ico">
+<title>Semaphore</title>
+</head>
+<body>
+<h1>Verify Phone</h1>
+<div id="centered">
+Please enter the confirmation that was sent to your phone<br><br>
+<input type="text" class="code">
+<input type="text" class="code">
+<input type="text" class="code">
+<input type="text" class="code">
+<input type="text" class="code">
+<input type="text" class="code">
+<input type="text" class="code">
+<input type="text" class="code">
+<br><br>
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="submit">Verify</button>
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="cancel">Cancel</button>
+<div id="internet-disconnected">Your internet seems to be disconnected. Please try again.</div>
+<div id="incorrect">Incorrect confirmation code, please try again</div> 
+</div>
+</body>
+</html>

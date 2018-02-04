@@ -1,0 +1,188 @@
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-blue.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+<script defer src="/static/js/index.js"></script>
+<link rel="shortcut icon" href="/static/icons/icon.ico" type="image/ico">
+<title>Semaphore</title>
+</head>
+<body>
+<div id="main">
+	<div id="front" class="page">
+		<div id="curve-container">
+			<svg id="elliptic-curve" xmlns="http://www.w3.org/2000/svg">
+				<linearGradient id="right">
+					<stop stop-color="#444"></stop>
+					<stop offset="70%" stop-color="#444"></stop>
+					<stop offset="100%" stop-color="rgba(0,0,0,0)"></stop>
+				</linearGradient>
+			</svg>
+		</div>
+		<div id="icon">
+			<h5>Welcome To</h5>
+			<h1>Semaphore</h1>
+		</div>
+		<button id="login" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="show()">Sign In</button>
+		<div id="blerb">
+			<h3>Simpler, risk-free, social communication secured through the blockchain</h3>
+		</div>
+		<img id="cont" src="/static/icons/cont.svg">
+	</div>
+	<div class="page">
+		<h2 class="centered">Semaphore lets you express things sincerely</h2>
+		<div class="graphic-container">
+			<div class="graphic-case left">
+				<img class="graphic" src="/static/icons/messages.svg">
+				<div class="description">Especially in a digital world, words are cheap and authenticity is precious</div>
+			</div>
+			<div class="graphic-case right">
+				<div class="description">Semaphore helps connect people who know each other and want to be in a relationship while reducing spam by attaching monetary value to interactions</div>
+				<img class="graphic" src="/static/icons/communication.svg">
+			</div>
+			<div class="graphic-case left">
+				<img class="graphic" src="/static/icons/raining.svg">
+				<div class="description">The money goes to the other person (minus transfer fees), so you can make money just by having an account, and if the person isn't interested they'll never know who it's from</div>
+			</div>
+		</div>
+	</div>
+	<div class="page">
+		<h2 class="centered">Semaphore lets you know someone's answer without having to ask the question</h2>
+		<div class="left point-container">
+			<img class="illustration" src="/static/icons/questions.svg">
+			<div class="caption">Semaphore automatically asks hypothetical questions relating to people you know</div>
+		</div>
+		<div class="right point-container">
+			<div class="caption">You can make groups, share questions with friends, give them the answer to let them make up questions, and more</div>
+			<img class="illustration" src="/static/icons/share.svg">
+		</div>
+		<div class="left point-container">
+			<img class="illustration" src="/static/icons/idea.svg">
+			<div class="caption">If you have a question you don't want to ask directly, it's likely that it will fit in with the rest of the questions on Semaphore</div>
+		</div>
+		<div class="right point-container">
+			<div class="caption">Semaphore will let you send them the question and tell you the response, without them knowing it wasn't asked automatically</div>
+			<img class="illustration" src="/static/icons/response.svg">
+		</div>
+	</div>
+	<div class="page separated">
+		<h2 class="centered">Semaphore takes privacy seriously</h2>
+		<div class="separator">
+			<div>
+				<h2 class="centered">both for the asker</h2>
+				<ul class="large-list">
+					<li>All of your interactions are stored in a distributed format on the blockchain, so no one from server admins to hackers can see them</li>
+					<li>We ensure that you can't tell which of your friends use Semaphore, so even if you're the only one, there is no way for the answerer to know</li>
+				</ul>
+			</div>
+			<div>
+				<h2 class="centered">and for the answerer</h2>
+				<ul class="large-list">
+					<li>Users are always told that the question could have been asked by someone else; that's part of the fun</li>
+					<li>Before joining a group, users are always shown what kinds of things will become public by joining</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="page" id="ico-case">
+		<div id="ico">
+			<h2 class="centered">Invest in the ICO</h2>
+			<h3 class="centered">Exponential Growth</h3>
+			The more users that use Semaphore, the faster it grows. Semaphore is designed to make it natural to bring in new users: sending money to someone not in the system is exactly the same as someone who is in the system. Users are also encouraged to make an account before they recieve anything, encouraging even faster growth.
+			<h3 class="centered">Increasing Demand</h3>
+			All transactions that go through Semaphore use Semaphore's block chain token, meaning that as Semaphore's user base grows, the token price will go up as well.
+			<h3 class="centered">Controlled Supply</h3>
+			Users are incentivized to keep money inside the system, ensuring that supply never floods out demand.<br><br>
+			<a href="/invest">Sign up for ICO updates</a>
+			<br>
+		</div>
+		<img src="/static/icons/expansion.svg" id="ico-img">
+	</div>
+	<div class="page" id="faq-case">
+		<h2 class="centered">Frequently Asked Questions</h2>
+		<ul id="faq">
+			<li>Why is it called Semaphore?</li>
+			<div>
+				In programming, a process is often split up into "threads", so that it can be run at the same time on multiple CPU or GPU cores and be faster than it would be otherwise. A semaphore is a variable that is used to make sure that different threads don't try to access and change a common resource at the same time, which would result in the program having weird behavior, called concurrency problems. Our version of Semaphore essentially does the same thing: it controls access to information in a manner that ensures that no one gets hurt. You can read more about semaphores in programming on the <a href="https://en.wikipedia.org/wiki/Semaphore_(programming)" target="_blank">Wikipedia page</a>.
+			</div>
+			<li>What is the graphic on the front page?</li>
+			<div>
+				The blockchain is an extremely important aspect of Semaphore's technology, so we decided it would be apt to put a related graphic on the front page. In order for transaction participants to sign off that something actually happened, you need a digital signiture that no one else can replicate. The way that this is done is by having everyone keep a private key and a public key. Once you encrypt something with one, you need to have the other in order to decrypt it. That way, you can use the public key to ensure that someone that had the private key agreed to the transaction. The public/private key algorithm that is typically used relies on elliptic curve cryptography, the continuous version of which is illustrated by the graphic. You can read more about the specifics in a <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/" target="_blank">blog post from Cloudflare</a>.
+			</div>
+			<li>What currency do you use for transactions?</li>
+			<div>
+				The distributed portion of Semaphore is built on the Etherium block chain, and uses a token as the currency for all transactions. As Semaphore grows, we expect demand for the token to rise along with the price, but we expect to keep the prices stable with respect to USD in order to give users a more consistant experience. 
+			</div>
+			<li>Is the project open source?</li>
+			<div>
+				Yes, feel free to fork and/or contribute on <a href="https://github.com/Semaphore-Co/Semaphore" target="_blank">GitHub</a>. (Alright, it's not actually asked frequently, but we're putting it here anyway)
+			</div>
+		</ul>
+	</div>
+</div>
+<div id="login-page">
+	<div id="close" onclick="dismiss()">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 161.8 161.8" style="enable-background:new 0 0 161.8 161.8;" xml:space="preserve">
+			<style type="text/css">
+				.st0{fill:none;stroke:#aaaaaa;stroke-width:12;stroke-linecap:round;stroke-miterlimit:10;}
+			</style>
+			<g>
+				<line class="st0" x1="10" y1="10" x2="151.8" y2="151.8"/>
+				<line class="st0" x1="151.8" y1="10" x2="10" y2="151.8"/>
+			</g>
+		</svg>
+	</div>
+	<div class="separator">
+		<div>
+			<h2 class="centered">Sign Up</h2>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="text" id="signup-username" pattern="[a-zA-Z0-9_\-.]+" autocomplete="username">
+				<label class="mdl-textfield__label" for="signup-username">Username</label>
+				<span class="mdl-textfield__error __hint">Letters, numbers, underscores, dashes, and dots only</span>
+				<span class="mdl-textfield__error __taken">Username taken</span>
+			</div><span id="username-valid">check</span><br>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="password" id="signup-password" pattern=".{8,}" autocomplete="new-password">
+				<label class="mdl-textfield__label" for="signup-password">Password</label>
+				<span class="mdl-textfield__error __hint">Password must be 8 characters or more</span>
+			</div><br>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="text" id="signup-name">
+				<label class="mdl-textfield__label" for="signup-name">Real Name (optional)</label>
+			</div><br>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="email" id="signup-email" pattern="^\S+@\S+\.\S+$">
+				<label class="mdl-textfield__label" for="signup-email">Email (optional)</label>
+				<span class="mdl-textfield__error">Invalid email</span>
+			</div><br>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="tel" id="signup-phone" pattern="[0-9() +\-]{6,}">
+				<label class="mdl-textfield__label" for="signup-phone">Phone Number (optional)</label>
+				<span class="mdl-textfield__error">Please enter a valid international-style phone number</span>
+			</div>
+			<div id="explanation">We ask for real names so that friends can recognize who you are in groups and for emails and phone numbers so that people can send you money without having to know your username. You can add additional emails and phone numbers later.</div><br>
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="signup">Sign Up</button>
+			<span id="signup-internet-disconnected">Your internet seems to be disconnected. Please try again.</span>
+		</div>
+		<div>
+			<h2 class="centered">Sign In</h2>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="text" id="signin-username">
+				<label class="mdl-textfield__label" for="signin-username">Username</label>
+			</div><br>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<input class="mdl-textfield__input" type="password" id="signin-password">
+				<label class="mdl-textfield__label" for="signin-password">Password</label>
+			</div><br><br>
+			<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="signin">Sign In</button>
+			<span id="signin-internet-disconnected">Your internet seems to be disconnected. Please try again.</span>
+			<span id="signin-incorrect">Incorrect username or password. Please try again.</span>
+		</div>
+	</div>
+</body>
+</html>

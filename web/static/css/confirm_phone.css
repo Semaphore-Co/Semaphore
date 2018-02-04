@@ -1,0 +1,29 @@
+h1 {
+	font-family: "Montserrat";
+	margin-top: 10vh;
+	text-align: center;
+}
+.code {
+	font-size: 48px;
+    font-family: "Montserrat";
+    outline: 0;
+    border: 0;
+    background-color: #f4f4f4;
+    border-bottom: 5px solid #ddd;
+    width: 1.2em;
+    text-align: center;
+}
+.code:focus {
+    border-bottom-color: #2196F3 !important;
+    background-color: #eff8ff !important;
+}
+#centered {
+	text-align: center;
+}
+button {
+	font-size: 3vw;
+}
+#internet-disconnected, #incorrect {
+	display: none;
+	color: red;
+}
