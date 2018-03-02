@@ -13,7 +13,7 @@
 <title>Semaphore</title>
 </head>
 <body>
-<div id="main">
+<div id="main"><div id="case">
 	<div id="front" class="page">
 		<div id="curve-container">
 			<svg id="elliptic-curve" xmlns="http://www.w3.org/2000/svg">
@@ -38,17 +38,18 @@
 		<h2 class="centered">Semaphore lets you express things sincerely</h2>
 		<div class="graphic-container">
 			<div class="graphic-case left">
-				<img class="graphic" src="/static/icons/messages.svg">
+				<div class="graphic-wrapper"><img class="graphic" src="/static/icons/messages.svg"></div>
 				<div class="description">Especially in a digital world, words are cheap and authenticity is precious</div>
 			</div>
 			<div class="graphic-case right">
 				<div class="description">Semaphore helps connect people who know each other and want to be in a relationship while reducing spam by attaching monetary value to interactions</div>
-				<img class="graphic" src="/static/icons/communication.svg">
+				<div class="graphic-wrapper"><img class="graphic" src="/static/icons/communication.svg"></div>
 			</div>
 			<div class="graphic-case left">
-				<img class="graphic" src="/static/icons/raining.svg">
+				<div class="graphic-wrapper"><img class="graphic" src="/static/icons/raining.svg"></div>
 				<div class="description">The money goes to the other person (minus transfer fees), so you can make money just by having an account, and if the person isn't interested they'll never know who it's from</div>
 			</div>
+			<div class="graphic-padding"></div>
 		</div>
 	</div>
 	<div class="page">
@@ -101,7 +102,9 @@
 			<a href="/invest">Sign up for ICO updates</a>
 			<br>
 		</div>
-		<img src="/static/icons/expansion.svg" id="ico-img">
+		<div id="ico-img-case">
+			<img src="/static/icons/expansion.svg" id="ico-img">
+		</div>
 	</div>
 	<div class="page" id="faq-case">
 		<h2 class="centered">Frequently Asked Questions</h2>
@@ -124,7 +127,7 @@
 			</div>
 		</ul>
 	</div>
-</div>
+</div></div>
 <div id="login-page">
 	<div id="close" onclick="dismiss()">
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 161.8 161.8" style="enable-background:new 0 0 161.8 161.8;" xml:space="preserve">

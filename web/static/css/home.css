@@ -116,3 +116,11 @@ h3 {
 .send-submit:active {
 	background-color: #bbb;
 }
+.email {
+	font-size: 20px;
+	margin-left: 20px;
+	vertical-align: middle;
+}
+#email-add-submit {
+	margin-right: 20px;
+}

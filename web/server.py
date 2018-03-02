@@ -198,4 +198,4 @@ def home(user):
 	return render_template("home.html", name=user["name"] or user["username"], username=user["name"] and user["username"], emails=user["emails"], phones=user["phones"])
 
 if __name__ == "__main__":
-	app.run(port = 8000, debug = True)
+	app.run(port = 8000, debug = True, host="0.0.0.0")

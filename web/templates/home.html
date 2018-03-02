@@ -37,8 +37,29 @@
 <div id="settings" class="main">
 	<h2>Settings</h2>
 	<h3>Email Addresses</h3>
-
+	{% for i in emails %}
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect" class="email-remove" email="{{ i }}">Remove</button>
+		<span class="email">{{ i }}</span>
+		<br><br>
+	{% endfor %}
+	<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="email-add-submit">Add</button>
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		<input class="mdl-textfield__input" type="email" id="email-add" pattern="^\S+@\S+\.\S+$">
+		<label class="mdl-textfield__label" for="email-add">Email</label>
+		<span class="mdl-textfield__error">Invalid email</span>
+	</div>
 	<h3>Phone Numbers</h3>
+	{% for i in phones %}
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect" class="email-remove" email="{{ i }}">Remove</button>
+		<span class="phone">{{ i }}</span>
+		<br><br>
+	{% endfor %}
+	<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="email-add-submit">Add</button>
+	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		<input class="mdl-textfield__input" type="tel" id="signup-phone" pattern="[0-9() +\-]{6,}">
+		<label class="mdl-textfield__label" for="signup-phone">Phone Number</label>
+		<span class="mdl-textfield__error">Please enter a valid international-style phone number</span>
+	</div>
 </div>
 </body>
 </html>
