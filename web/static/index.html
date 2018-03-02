@@ -30,24 +30,24 @@
 		</div>
 		<button id="login" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="show()">Sign In</button>
 		<div id="blerb">
-			<h3>Simpler, risk-free, social communication secured through the blockchain</h3>
+			<h3>Simpler, risk-free communication secured through the blockchain</h3>
 		</div>
 		<img id="cont" src="/static/icons/cont.svg">
 	</div>
 	<div class="page">
-		<h2 class="centered">Semaphore lets you express things sincerely</h2>
+		<h2 class="centered">Semaphore lets you express desires sincerely</h2>
 		<div class="graphic-container">
 			<div class="graphic-case left">
 				<div class="graphic-wrapper"><img class="graphic" src="/static/icons/messages.svg"></div>
-				<div class="description">Especially in a digital world, words are cheap and authenticity is precious</div>
+				<div class="description">In a digital world, words are cheap and authenticity is precious.</div>
 			</div>
 			<div class="graphic-case right">
-				<div class="description">Semaphore helps connect people who know each other and want to be in a relationship while reducing spam by attaching monetary value to interactions</div>
+				<div class="description">Semaphore helps you discover hidden connections with your peers. Find out if that crush is mutual. If it isn't, they never know you tried.</div>
 				<div class="graphic-wrapper"><img class="graphic" src="/static/icons/communication.svg"></div>
 			</div>
 			<div class="graphic-case left">
 				<div class="graphic-wrapper"><img class="graphic" src="/static/icons/raining.svg"></div>
-				<div class="description">The money goes to the other person (minus transfer fees), so you can make money just by having an account, and if the person isn't interested they'll never know who it's from</div>
+				<div class="description">To keep things genuine, a small amount of money is committed to each match. The recipient can try to reciprocate with it or just cash out.</div>
 			</div>
 			<div class="graphic-padding"></div>
 		</div>
@@ -109,21 +109,41 @@
 	<div class="page" id="faq-case">
 		<h2 class="centered">Frequently Asked Questions</h2>
 		<ul id="faq">
-			<li>Why is it called Semaphore?</li>
+			<li>What makes Semaphore more than "Tinder with a blockchain?"</li>
 			<div>
-				In programming, a process is often split up into "threads", so that it can be run at the same time on multiple CPU or GPU cores and be faster than it would be otherwise. A semaphore is a variable that is used to make sure that different threads don't try to access and change a common resource at the same time, which would result in the program having weird behavior, called concurrency problems. Our version of Semaphore essentially does the same thing: it controls access to information in a manner that ensures that no one gets hurt. You can read more about semaphores in programming on the <a href="https://en.wikipedia.org/wiki/Semaphore_(programming)" target="_blank">Wikipedia page</a>.
+				Semaphore has fundamentally different goals than traditional dating apps. It intends to expand its scope beyond just romantic interest, but even within the realm of matching romantic partners, Semaphore is about “discovering hidden connections” rather than pairing up strangers. Tinder matches involve very little commitment, and many users find their time wasted with frivolous pairings. Semaphore focuses on people who already know each other and want to determine whether some feeling or belief is mutual.
 			</div>
-			<li>What is the graphic on the front page?</li>
+			<li>Why require money for matches when existing services are free?</li>
 			<div>
-				The blockchain is an extremely important aspect of Semaphore's technology, so we decided it would be apt to put a related graphic on the front page. In order for transaction participants to sign off that something actually happened, you need a digital signiture that no one else can replicate. The way that this is done is by having everyone keep a private key and a public key. Once you encrypt something with one, you need to have the other in order to decrypt it. That way, you can use the public key to ensure that someone that had the private key agreed to the transaction. The public/private key algorithm that is typically used relies on elliptic curve cryptography, the continuous version of which is illustrated by the graphic. You can read more about the specifics in a <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/" target="_blank">blog post from Cloudflare</a>.
+				Offering up money serves adds a cost to Semaphore matches, which is an effective way to demonstrate that the signalled belief is genuine. Without this kind of commitment, there would be nothing stopping someone from signalling everything to everyone, just to see what responses they get back, and the whole system becomes unreliable. From an individual's perspective, spending a small amount of money will ensure that any response is genuine, a service that they can't get anywhere else.
 			</div>
-			<li>What currency do you use for transactions?</li>
+			<li>Why would the average person have any interest in Semaphore?</li>
 			<div>
-				The distributed portion of Semaphore is built on the Etherium block chain, and uses a token as the currency for all transactions. As Semaphore grows, we expect demand for the token to rise along with the price, but we expect to keep the prices stable with respect to USD in order to give users a more consistant experience. 
+				Even if nothing else about the platform interests someone, there's always the lure of potential free money. A key feature of Semaphore is that users anonymously receive the money that other people commit when matching with them. Someone who is popular, well-connected, or attractive has a chance to earn money by signing up for Semaphore and evangelizing it to their peers. In this sense, Semaphore markets itself.
 			</div>
-			<li>Is the project open source?</li>
+			<li>Doesn't Semaphore rely too heavily on "network effects" to be useful?</li>
 			<div>
-				Yes, feel free to fork and/or contribute on <a href="https://github.com/Semaphore-Co/Semaphore" target="_blank">GitHub</a>. (Alright, it's not actually asked frequently, but we're putting it here anyway)
+				Not particularly. A user wishing to signal to someone without a Semaphore account provides some of that person's contact information, and they receive an explanation of what Semaphore is and instructions on signing up. The money they can claim provides an incentive for them to sign up and see what Semaphore is about. Additionaly, Semaphore doesn't provide users with information on who else has an account, so a large set of users is not needed to preserve anonymity.
+			</div>
+			<li>Why is blockchain technology useful for this application?</li>
+			<div>
+				As a distributed application, Semaphore is trustless. There is no private data stored in a central database. Instead, match information is stored on the Ethereum blockchain, with the potential for further obfuscation using zk-SNARKs. As countless hacks (such as Ashley Madison in 2015) have demonstrated, centralized databases are a liability when it comes to this kind of information.
+			</div>
+			<li>Who's behind Semaphore?</li>
+			<div>
+				Semaphore was imagined and designed by Dennis Maloney, a Computer Science and Economics student at MIT. Development of Semaphore is a collaboration between Dennis and Kent Slaney, another computer science student at MIT.
+			</div>
+			<li>What's the meaning of the name Semaphore?</li>
+			<div>
+				A semaphore is a signal, and Semaphore is a platform for sending reliable signals. Additionally, "semaphore" has a technical meaning within the realm of computer science. Computer programs are often split up into separate threads that run at the same time. A semaphore is a variable used to make sure that different threads don't access and change a common resource at the same time, which would cause problems in the program. Semaphore serves an analogous role: it controls access to information in a manner that ensures no one gets hurt.
+			</div>
+			<li>Is there any significance behind the graphic on the front page?</li>
+			<div>
+				Yes, actually. The public/private key algorithm typically used by blockchains relies on elliptic curve cryptography, the continuous version of which is illustrated by the graphic. If you're interested, you can read more about elliptic curve cryptography in <a href="https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/" target="_blank">this Cloudflare blog post</a>.
+			</div>
+			<li>Is Semaphore open source?</li>
+			<div>
+				Yes, Semaphore's source code is available on <a href="https://github.com/Semaphore-Co/Semaphore" target="_blank">GitHub</a>.
 			</div>
 		</ul>
 	</div>

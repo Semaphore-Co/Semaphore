@@ -5,7 +5,7 @@ from oauth2client import client, tools
 import base64
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from apiclient import errors, discovery
+import apiclient
 import mimetypes
 from email.mime.image import MIMEImage
 from email.mime.audio import MIMEAudio
@@ -32,10 +32,10 @@ def get_credentials():
 def SendMessage(sender, to, subject, msgHtml, msgPlain, attachmentFile=None):
     credentials = get_credentials()
     http = credentials.authorize(httplib2.Http())
-    service = discovery.build('gmail', 'v1', http=http)
+    service = apiclient.discovery.build('gmail', 'v1', http=http)
     if attachmentFile:
         message1 = createMessageWithAttachment(sender, to, subject, msgHtml, msgPlain, attachmentFile)
-    else: 
+    else:
         message1 = CreateMessageHtml(sender, to, subject, msgHtml, msgPlain)
     result = SendMessageInternal(service, "me", message1)
     return result
@@ -45,7 +45,7 @@ def SendMessageInternal(service, user_id, message):
         message = (service.users().messages().send(userId=user_id, body=message).execute())
         print('Message Id: %s' % message['id'])
         return message
-    except errors.HttpError as error:
+    except apiclient.errors.HttpError as error:
         print('An error occurred: %s' % error)
         return "Error"
     return "OK"
@@ -68,7 +68,7 @@ def createMessageWithAttachment(
       to: Email address of the receiver.
       subject: The subject of the email message.
       msgHtml: Html message to be sent
-      msgPlain: Alternative plain text message for older email clients          
+      msgPlain: Alternative plain text message for older email clients
       attachmentFile: The path to the file to be attached.
 
     Returns:
