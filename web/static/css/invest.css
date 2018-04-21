@@ -1,0 +1,72 @@
+@import "index.css";
+
+#main {
+    margin-top: 0vh;
+}
+#ico-case {
+	text-align: center;
+}
+#ico-img-case {
+	display: inline-block;
+	height: 0;
+	width: 40%;
+}
+#ico {
+    display: inline-block;
+    max-width: 50%;
+    vertical-align: top;
+    text-align: right;
+    font-family: "Open Sans";
+    font-size: 166%;
+    line-height: 1.2;
+    margin-right: 2%;
+    margin-bottom: 6vh;
+}
+#ico h2, #ico h3 {
+    text-align: right;
+    margin-right: 0;
+    margin-left: 0;
+    width: auto
+}
+#ico h3 {
+	font-family: "Open Sans";
+	font-weight: bold;
+	margin: 20 0;
+}
+#ico-img {
+	display: inline;
+    height: 75vh;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    max-width: 100%;
+}
+/*
+#distribution {
+    font-family: "Open Sans";
+    font-size: 166%;
+    line-height: 1.2;
+}
+#distribution h3 {
+    font-size: 28px;
+}
+*/
+.split h2 {
+    margin-top: 5%;
+}
+.split p {
+    font-size: 80%;
+    line-height: 1.2;
+}
+#instructions {
+    font-family: "Open Sans";
+    font-weight: bold;
+}
+#instructions p {
+    font-size: 80%;
+}
+#token_icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}

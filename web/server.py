@@ -1,4 +1,4 @@
-import os, json, hashlib, re, random
+import os, json, hashlib, re, random, GeoIP
 from flask import Flask, request, abort, url_for, session, redirect, render_template
 from database import database
 from mail import mail
@@ -15,6 +15,7 @@ with open(relpath("credentials/flask_secret_key")) as f:
 	app.secret_key = f.read().strip()
 
 db = database(app, relpath("database.db"), relpath("schema.sql"), ["PRAGMA foreign_keys = ON"])
+gi = GeoIP.open('/usr/share/GeoIP/GeoIP.dat', GeoIP.GEOIP_STANDARD)
 
 @app.teardown_appcontext
 def close_connection(exception):
@@ -181,6 +182,12 @@ def index():
 @app.route("/index")
 def welcome():
 	return app.send_static_file("index.html")
+
+@app.route("/invest")
+def invest():
+	if gi.country_code_by_addr(request.environ['REMOTE_ADDR']) == 'US':
+		return app.send_static_file("block_us.html")
+	return app.send_static_file("invest.html")
 
 @app.route("/login")
 def login():

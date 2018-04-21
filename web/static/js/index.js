@@ -221,7 +221,7 @@ Array.prototype.forEach.call(document.querySelectorAll("#faq > li"), i => {
 		}
 	}
 	signup.onclick = submit("/signup/custom?", signup, document.getElementById("signup-internet-disconnected"),
-			["signup-username", "signup-password", "signup-name", "signup-phone", "signup-email"],
+			["signup-username", "signup-password", "signup-phone", "signup-email"],
 			["signup-username", "signup-password"], data => {
 				if(data['phone']) data['phone'] = data['phone'].replace(/[^0-9]/g, '')
 			}, () => response => {

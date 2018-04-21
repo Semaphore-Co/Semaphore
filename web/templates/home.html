@@ -15,27 +15,37 @@
 <title>Semaphore</title>
 </head>
 <body>
+<div id="warning">Semaphore is not done. Feel free to poke around in this<br>non-functional mockup for a preview of how it might look.</div>
 <ul id="menu">
 <div id="display-name">{{ name }}</div>
 {% if username %}<div id="username">{{ username }}</div>{% endif %}
-<div id="balance-preview"><span id="balance-text">Balance:<br>$</span>0.00</div>
-<a href="#send"><span>send</span>Send Money</a>
-<a href="#balance"><span>account_balance</span>Manage Balance</a>
+<div id="balance-preview"><span id="balance-text">Balance:<br></span>0.00</div>
+<a href="#send"><span>send</span>Signal</a>
+<a href="#balance"><span>account_balance</span>Manage Tokens</a>
 <a href="#settings"><span>settings</span>Settings</a>
 <a href="/logout"><span>exit_to_app</span>Sign Out</a>
 </ul>
 <div id="send" class="main">
-	<h2>Send Money</h2>
+	<h2>Signal</h2>
+	<h3>Message</h3>
+		<h4>I'm interested in you. <b>(Default Message)</b></h4>
+	<h3>Recipient</h3>
 	<br>
+	<input type="text" class="send-text" placeholder="Via Ethereum address"><button class="send-submit">SEND</button>
+	<br><br><br>
 	<input type="text" class="send-text" placeholder="Via email"><button class="send-submit">SEND</button>
 	<br><br><br>
 	<input type="text" class="send-text" placeholder="Via text"><button class="send-submit">SEND</button>
 </div>
 <div id="balance" class="main">
-	<h2>Manage Balance</h2>
+	<h2>Manage Tokens</h2>
+	<br>
+	<h4><a href="#settings">Connect your Ethereum address to manage your token balance.</a></h4>
 </div>
 <div id="settings" class="main">
 	<h2>Settings</h2>
+	<h3>Ethereum Address</h3>
+	<h4>Your Ethereum address isn't linked yet. Link it with MetaMask.<br>(not yet implemented)</h4>
 	<h3>Email Addresses</h3>
 	{% for i in emails %}
 		<button class="mdl-button mdl-js-button mdl-js-ripple-effect" class="email-remove" email="{{ i }}">Remove</button>
