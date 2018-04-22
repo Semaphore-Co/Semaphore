@@ -351,5 +351,6 @@ body {
 	font-family: "Montserrat";
 	font-size: 36px;
 	padding-bottom: 5vh;
+	position: relative;
 	bottom: 0;
 }
